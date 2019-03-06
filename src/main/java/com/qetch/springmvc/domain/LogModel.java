@@ -5,9 +5,10 @@ public class LogModel {
 	private String remoteAddr;	//IP
 	private String exception;	//异常
 	private String title;		//日志标题
-	private String requestUrl;	//请求地址
+	private String requestUri;	//请求地址
 	private String type;		//日志类型
 	private String description;	//日志记录描述
+	private String addTime;		//日志添加时间
 	public User getUser() {
 		return user;
 	}
@@ -32,11 +33,11 @@ public class LogModel {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getRequestUrl() {
-		return requestUrl;
+	public String getRequestUri() {
+		return requestUri;
 	}
-	public void setRequestUrl(String requestUrl) {
-		this.requestUrl = requestUrl;
+	public void setRequestUri(String requestUri) {
+		this.requestUri = requestUri;
 	}
 	public String getType() {
 		return type;
@@ -50,9 +51,16 @@ public class LogModel {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public String getAddTime() {
+		return addTime;
+	}
+	public void setAddTime(String addTime) {
+		this.addTime = addTime;
+	}
 	@Override
 	public String toString() {
 		return "LogModel [user=" + user + ", remoteAddr=" + remoteAddr + ", exception=" + exception + ", title=" + title
-				+ ", requestUrl=" + requestUrl + ", type=" + type + ", description=" + description + "]";
+				+ ", requestUri=" + requestUri + ", type=" + type + ", description=" + description + ", addTime="
+				+ addTime + "]";
 	}
 }
